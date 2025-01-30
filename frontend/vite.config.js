@@ -6,7 +6,10 @@ export default defineConfig({
     port: 5173,        
     hmr: {
       clientPort: 5173,
-    },
+    }, 
+    watch: {
+    usePolling: true,
+    }
   },
   optimizeDeps: {
     include: [
@@ -14,6 +17,6 @@ export default defineConfig({
       'react-dom'
     ]
   },
-  base: '/'
+  base: '/',
 });
 
