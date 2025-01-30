@@ -18,7 +18,8 @@ Install the following:
    ```bash
    git clone https://github.com/keeryno4/react-vite-flask-boilerplate.git
    cd react-vite-flask-boilerplate
-2. Run the Boilerplate
+2. Open Docker Desktop
+3. Run the Boilerplate
    ```bash
    docker-compose up --build
 
