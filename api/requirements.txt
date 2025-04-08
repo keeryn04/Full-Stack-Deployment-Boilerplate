@@ -1,0 +1,11 @@
+flask
+flask-cors
+mysql-connector-python
+requests
+dotenv
+flask-session
+supabase
+pyjwt
+datetime
+waitress
+bcrypt
