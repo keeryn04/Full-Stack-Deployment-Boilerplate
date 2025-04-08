@@ -2,9 +2,11 @@
 
 This is a boilerplate to set up a full-stack application with:
 
-- **Frontend**: React (with Vite for fast development)
+- **Frontend**: React (with Vite and TailwindCSS for fast development)
 - **Backend**: Flask (Python-based web framework)
-- **Docker**: For containerization and easy deployment
+- **Docker**: For containerization, local database creation and easy deployment
+- **Vercel**: For frontend deployment
+- **Supabase**: For PostgresSQL database hosting
 
 This boilerplate helps quickly create an application, with an easy setup process for quick use.
 
@@ -23,13 +25,26 @@ Install the following:
    ```bash
    docker-compose up --build
 
+## How to Use
+- Reset the local database with init.sql
+   ```bash
+   docker compose down -v
+- Check local database via MySQL Workbench:
+   - Open MySQL Workbench
+   - Create a connection to port 3307 with the login info `root` and `password`
+- Create Vercel predeployment with `vercel` or production deployment with `vercel --prod`
+
 # Project Structure
 ```markdown.
-├── backend/                # Flask backend code
+├── api/                    # Flask backend code
 │   ├── app/                # Flask app files
 │   └── Dockerfile.backend  # Dockerfile for backend
 ├── frontend/               # React frontend code
 │   ├── src/                # React source files
 │   ├── public/             # Public assets
 │   └── Dockerfile.frontend # Dockerfile for frontend
+├── database/               # MySQL database code
+│   ├── database_connector  # Create Supabase connection
+│   ├── init.sql            # SQL file to initialize local database
 └── docker-compose.yml      # Docker Compose configuration
+└── vercel.json             # Vercel configurations
