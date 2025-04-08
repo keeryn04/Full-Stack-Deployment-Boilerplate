@@ -34,6 +34,9 @@ Install the following:
    - Create a connection to port 3307 with the login info `root` and `password`
 - Create Vercel predeployment with `vercel` or production deployment with `vercel --prod`
 
+## Usage
+Feel free to use this boilerplate to create projects, just give me credit in the README
+
 # Project Structure
 ```markdown.
 ├── api/                    # Flask backend code
